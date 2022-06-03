@@ -20,7 +20,7 @@ select mmsi, count(*) from classBPositionReport group by mmsi
 order by count(*) desc ;
 
 select field1, field2 from rawFields r, classAPositionReport a
-where a.sentence_id = r.sentence_id
-and r.field2 != '1';
+where a.sentence_id = r.sentence_id;
 
 
+select * from rawFields;
