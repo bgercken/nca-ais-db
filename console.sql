@@ -19,8 +19,55 @@ order by count(*) desc ;
 select mmsi, count(*) from classBPositionReport group by mmsi
 order by count(*) desc ;
 
+select * from rawFields;
+
+-- Test Table 4
+--  Field2 - Has value of 1 if message is of type 1, 2, 3,  or 18
+--
+
+select field1, field2, field5, d.s_type
+from rawFields r, rawData d
+where d.sentence_id = r.sentence_id
+and d.s_type in (1, 2, 3, 18);
+
+-- Same as last specifically checking field2 != 1
+
+select field1, field2, field5, d.s_type
+from rawFields r, rawData d
+where d.sentence_id = r.sentence_id
+and d.s_type in (1, 2, 3, 18)
+and r.field2 not in ('1');
+
+-- Field3 - Has value of 1 if message is of type 1, 2, 3, 4, 18 or 24
+
+select field1, field3, field5, d.s_type
+from rawFields r, rawData d
+where d.sentence_id = r.sentence_id
+and d.s_type in (1, 2, 3, 18, 24);
+
+select field1, field3, field5, d.s_type
+from rawFields r, rawData d
+where d.sentence_id = r.sentence_id
+and d.s_type in (1, 2, 3, 18, 24)
+and r.field3 not in ('1');
+
+-- class a report field 2
 select field1, field2 from rawFields r, classAPositionReport a
 where a.sentence_id = r.sentence_id;
 
+-- check class b report field 2 == 1
+select field1, field2, field5, d.s_type
+from rawFields r, classBPositionReport b, rawData d
+where b.sentence_id = r.sentence_id
+and d.s_type=18;
+
+-- list class b report field2 != 1 (should be no results)
+select field1, field2, field5, d.s_type
+from rawFields r, classBPositionReport b, rawData d
+where b.sentence_id = r.sentence_id
+and d.s_type=18 and r.field2 != 1;
 
 select * from rawFields;
+
+select sentence_id, field5 from rawFields where field5 not in ('A', 'B')
+
