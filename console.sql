@@ -5,12 +5,14 @@ select s_type, count(*) from rawData group by s_type;
 
 select count(*) from rawData where hasError=1;
 
-
+-- Summary of messages/reports in the rawData table.
 select distinct s_type, count(*), t.name from rawData r, aisMessageTypes t
 where t.message_id=r.s_type
 group by s_type;
 
 select distinct mmsi from classBPositionReport;
+
+select * from aisMessageTypes;
 
 
 select mmsi, count(*) from classAPositionReport group by mmsi
@@ -96,3 +98,20 @@ select * from classAPositionReport;
 select distinct msg_type from classAPositionReport;
 
 select distinct s_type, count(*) from rawData group by s_type;
+
+
+-- staticDataReports
+select * from staticDataReport;
+
+select count(*) from rawData where s_type=24;
+
+select * from staticDataReportA;
+
+select * from staticDataReport r, staticDataReportA a
+where r.sentence_id=a.sentence_id;
+
+select * from staticDataReport where sentence_id=3600;
+
+select * from staticDataReportA where rowid=100;
+
+select * from staticDataReport r, staticDataReportA a where r.sentence_id=3600 and a.sentence_id=3600;
