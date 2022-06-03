@@ -69,5 +69,8 @@ and d.s_type=18 and r.field2 != 1;
 
 select * from rawFields;
 
-select sentence_id, field5 from rawFields where field5 not in ('A', 'B')
+select sentence_id, field5 from rawFields where field5 not in ('A', 'B');
+
+
+select count(*) from rawData;
 
