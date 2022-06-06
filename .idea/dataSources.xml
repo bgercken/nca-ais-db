@@ -27,5 +27,12 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/fortsmallwood/smallwood-ais.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="nca-ais-220605" uuid="740a5e4a-3acf-493d-aad6-c629aaaa359f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/NCA-LIVE/220605/ais-data.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
