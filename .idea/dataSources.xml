@@ -13,25 +13,32 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="nuwc-ais" uuid="a0327a01-4b0b-4bef-b0b9-c2ab0adf26ab">
+    <data-source source="LOCAL" name="nca-220605" uuid="a75438a2-0cef-4d18-b1dd-9667a2245e68">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/NCA-LIVE/220605/ais-data.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="nuwc" uuid="407a27de-dcaa-47cf-9b22-7a1f71b4b364">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/nuwc/nuwc-ais.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="smallwood-ais" uuid="b59f21b5-da2a-4a93-9cd6-9b29b798de07">
+    <data-source source="LOCAL" name="ais-data.db" uuid="2a7ddad1-e46d-40ef-b091-9786cfb617c7">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/fortsmallwood/smallwood-ais.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../pyais/ais_db/ais-data.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="nca-ais-220605" uuid="740a5e4a-3acf-493d-aad6-c629aaaa359f">
+    <data-source source="LOCAL" name="nuwc2" uuid="9bf638ec-fbaa-4e83-befc-910207c62af2">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/NCA-LIVE/220605/ais-data.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../../../data/data-sets/nuwc2/nuwc-ais-data.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
