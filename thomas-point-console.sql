@@ -17,12 +17,16 @@ select * from classAPositionReport;
 select * from baseStationReport;
 
 -- Type 5
-
+select * from classAStaticVoyageData;
 -- Type 18
 select * from classBPositionReport;
 
 -- Type 19
 select * from extendedClassBPositionReport;
+
+-- Type 21
+select * from aidsToNavigationReport;
+select * from aidsToNavigationTypes;
 
 -- Type 24
 select * from staticDataReport;
